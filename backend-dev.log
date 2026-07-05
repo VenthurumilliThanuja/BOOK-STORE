@@ -1,0 +1,157 @@
+
+> bookstore-backend@1.0.0 dev
+> nodemon server.js
+
+[33m[nodemon] 3.1.14[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,cjs,json[39m
+[32m[nodemon] starting `node server.js`[39m
+Server running on port 5000
+MongoDB connected: 127.0.0.1
+[0mGET / [32m200[0m 3.377 ms - 38[0m
+[0mPOST /api/auth/login [33m401[0m 73.791 ms - 208[0m
+[0mGET /api/books?limit=2 [32m200[0m 128.272 ms - 930[0m
+[0mPOST /api/auth/login [33m401[0m 6.728 ms - 208[0m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node server.js`[39m
+Server running on port 5000
+MongoDB connected: 127.0.0.1
+[0mPOST /api/auth/login [32m200[0m 715.367 ms - 281[0m
+[0mPOST /api/auth/login [32m200[0m 140.026 ms - 280[0m
+[0mPOST /api/auth/login [32m200[0m 394.909 ms - 280[0m
+[0mGET /api/books?limit=8&sort=newest [32m200[0m 179.371 ms - 2688[0m
+[0mGET /api/books?limit=8&sort=newest [36m304[0m 20.380 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 52.574 ms - 2688[0m
+[0mGET /api/books/meta [32m200[0m 60.227 ms - 162[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 18.506 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 20.528 ms - -[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5769 [32m200[0m 90.012 ms - 2[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5769 [36m304[0m 5.631 ms - -[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5769 [32m200[0m 128.178 ms - 448[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5769 [32m200[0m 18.098 ms - 448[0m
+[0mGET /api/books?genre=Technology&limit=4 [32m200[0m 25.520 ms - 945[0m
+[0mGET /api/books?genre=Technology&limit=4 [36m304[0m 10.937 ms - -[0m
+[0mPOST /api/reviews [32m201[0m 109.241 ms - 221[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5769 [32m200[0m 42.035 ms - 446[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5769 [32m200[0m 51.175 ms - 252[0m
+[0mGET /api/books?genre=Technology&limit=4 [32m200[0m 14.021 ms - 943[0m
+[0mGET /api/books/meta [36m304[0m 21.859 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 25.914 ms - 2686[0m
+[0mGET /api/books/meta [36m304[0m 23.379 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 21.685 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 10.995 ms - 2686[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=1&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 23.210 ms - 2686[0m
+[0mGET /api/books?search=&genre=Business&author=&minPrice=1&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 16.883 ms - 486[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=1&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 16.824 ms - 483[0m
+[0mGET /api/books?search=&genre=Self+Help&author=&minPrice=1&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 18.571 ms - 894[0m
+[0mGET /api/books?search=&genre=Technology&author=&minPrice=1&maxPrice=&rating=&availability=&sort=newest&page=1&view=list&limit=8 [32m200[0m 15.624 ms - 943[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5765 [32m200[0m 21.592 ms - 455[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5765 [32m200[0m 24.886 ms - 298[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5765 [32m200[0m 24.531 ms - 455[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5765 [36m304[0m 17.362 ms - -[0m
+[0mGET /api/books?genre=Technology&limit=4 [32m200[0m 12.464 ms - 943[0m
+[0mGET /api/books?genre=Technology&limit=4 [36m304[0m 12.701 ms - -[0m
+[0mPOST /api/orders [32m201[0m 136.700 ms - 477[0m
+[0mGET /api/orders [32m200[0m 27.586 ms - 908[0m
+[0mGET /api/orders [36m304[0m 16.212 ms - -[0m
+[0mGET /api/orders [36m304[0m 21.373 ms - -[0m
+[0mGET /api/orders [36m304[0m 12.558 ms - -[0m
+[0mGET /api/orders [36m304[0m 18.875 ms - -[0m
+[0mGET /api/orders [36m304[0m 14.528 ms - -[0m
+[0mGET /api/orders [36m304[0m 18.795 ms - -[0m
+[0mGET /api/orders [36m304[0m 15.811 ms - -[0m
+[0mPUT /api/orders/6a4a8908dc8e6c2a09e7d5d9/cancel [32m200[0m 39.530 ms - 480[0m
+[0mGET /api/orders [32m200[0m 16.967 ms - 911[0m
+[0mGET /api/orders [36m304[0m 15.021 ms - -[0m
+[0mGET /api/orders [36m304[0m 12.271 ms - -[0m
+[0mGET /api/orders [36m304[0m 19.191 ms - -[0m
+[0mGET /api/orders [36m304[0m 14.991 ms - -[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5765 [32m200[0m 11.393 ms - 455[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5765 [36m304[0m 16.372 ms - -[0m
+[0mGET /api/books/6a4a8794eca0d9e4bc9c5765 [32m200[0m 15.289 ms - 455[0m
+[0mGET /api/reviews/6a4a8794eca0d9e4bc9c5765 [36m304[0m 9.880 ms - -[0m
+[0mGET /api/books?genre=Technology&limit=4 [32m200[0m 13.743 ms - 943[0m
+[0mGET /api/books?genre=Technology&limit=4 [36m304[0m 11.877 ms - -[0m
+[0mGET /api/orders [32m200[0m 10.118 ms - 911[0m
+[0mGET /api/orders [36m304[0m 15.135 ms - -[0m
+[0mGET /api/orders [36m304[0m 18.622 ms - -[0m
+[0mGET /api/orders [36m304[0m 17.280 ms - -[0m
+[0mGET /api/books?limit=8&sort=newest [32m200[0m 13.800 ms - 2686[0m
+[0mGET /api/books?limit=8&sort=newest [36m304[0m 7.439 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 20.363 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 27.694 ms - 2686[0m
+[0mGET /api/books/meta [36m304[0m 10.574 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 19.621 ms - -[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 12.493 ms - 483[0m
+[0mGET /api/books/meta [36m304[0m 8.717 ms - -[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 18.791 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 17.239 ms - -[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 19.634 ms - -[0m
+[0mGET /api/orders [36m304[0m 56.491 ms - -[0m
+[0mGET /api/orders [36m304[0m 17.875 ms - -[0m
+[0mPOST /api/auth/login [32m200[0m 357.791 ms - 281[0m
+[0mGET /api/orders [32m200[0m 14.911 ms - 2[0m
+[0mGET /api/orders [36m304[0m 12.641 ms - -[0m
+[0mGET /api/admin/users [32m200[0m 108.474 ms - 372[0m
+[0mGET /api/admin/stats [32m200[0m 130.098 ms - 59[0m
+[0mGET /api/books?limit=100 [32m200[0m 127.601 ms - 2686[0m
+[0mGET /api/admin/orders [32m200[0m 135.229 ms - 969[0m
+[0mGET /api/admin/users [36m304[0m 43.546 ms - -[0m
+[0mGET /api/admin/reviews [32m200[0m 109.572 ms - 679[0m
+[0mGET /api/admin/stats [36m304[0m 40.948 ms - -[0m
+[0mGET /api/books?limit=100 [36m304[0m 36.016 ms - -[0m
+[0mGET /api/admin/orders [36m304[0m 29.014 ms - -[0m
+[0mGET /api/admin/reviews [36m304[0m 22.052 ms - -[0m
+[0mPOST /api/books [32m201[0m 162.146 ms - 425[0m
+[0mGET /api/admin/users [36m304[0m 63.691 ms - -[0m
+[0mGET /api/admin/stats [32m200[0m 92.164 ms - 59[0m
+[0mGET /api/admin/reviews [36m304[0m 87.614 ms - -[0m
+[0mGET /api/books?limit=100 [32m200[0m 102.963 ms - 3112[0m
+[0mGET /api/admin/orders [36m304[0m 109.869 ms - -[0m
+[0mPUT /api/books/6a4a8bd7dc8e6c2a09e7d664 [32m200[0m 36.314 ms - 416[0m
+[0mGET /api/admin/stats [36m304[0m 46.051 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 45.799 ms - -[0m
+[0mGET /api/books?limit=100 [32m200[0m 46.923 ms - 3103[0m
+[0mGET /api/admin/orders [36m304[0m 59.001 ms - -[0m
+[0mGET /api/admin/reviews [36m304[0m 48.173 ms - -[0m
+[0mPUT /api/books/6a4a8bd7dc8e6c2a09e7d664 [32m200[0m 25.490 ms - 416[0m
+[0mGET /api/admin/stats [36m304[0m 34.628 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 36.285 ms - -[0m
+[0mGET /api/books?limit=100 [36m304[0m 37.797 ms - -[0m
+[0mGET /api/admin/orders [36m304[0m 68.869 ms - -[0m
+[0mGET /api/admin/reviews [36m304[0m 57.986 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 21.652 ms - 3103[0m
+[0mGET /api/books/meta [32m200[0m 24.179 ms - 183[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 22.883 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 15.483 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 12.709 ms - -[0m
+[0mGET /api/books?search=&genre=&author=&minPrice=&maxPrice=&rating=&availability=&sort=popularity&page=1&view=grid&limit=8 [32m200[0m 14.360 ms - 3103[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 29.835 ms - -[0m
+[0mGET /api/orders [36m304[0m 13.141 ms - -[0m
+[0mGET /api/orders [36m304[0m 8.322 ms - -[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 10.789 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 15.152 ms - -[0m
+[0mGET /api/books?search=&genre=Fiction&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 13.477 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 13.623 ms - -[0m
+[0mGET /api/books?search=&genre=Kids&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 12.616 ms - 457[0m
+[0mGET /api/admin/stats [36m304[0m 37.439 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 33.342 ms - -[0m
+[0mGET /api/books?limit=100 [36m304[0m 34.703 ms - -[0m
+[0mGET /api/admin/orders [36m304[0m 55.260 ms - -[0m
+[0mGET /api/admin/reviews [36m304[0m 59.825 ms - -[0m
+[0mGET /api/admin/stats [36m304[0m 45.469 ms - -[0m
+[0mGET /api/admin/users [36m304[0m 48.342 ms - -[0m
+[0mGET /api/books?limit=100 [36m304[0m 50.222 ms - -[0m
+[0mGET /api/admin/orders [36m304[0m 42.973 ms - -[0m
+[0mGET /api/admin/reviews [36m304[0m 45.415 ms - -[0m
+[0mGET /api/books?limit=8&sort=newest [32m200[0m 12.447 ms - 3103[0m
+[0mGET /api/books?limit=8&sort=newest [36m304[0m 8.778 ms - -[0m
+[0mGET /api/books?search=&genre=Children&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [32m200[0m 12.106 ms - 41[0m
+[0mGET /api/books/meta [36m304[0m 18.374 ms - -[0m
+[0mGET /api/books?search=&genre=Children&author=&minPrice=&maxPrice=&rating=&availability=&sort=newest&page=1&view=grid&limit=8 [36m304[0m 11.274 ms - -[0m
+[0mGET /api/books/meta [36m304[0m 8.964 ms - -[0m
+[0mGET /api/books?limit=8&sort=newest [36m304[0m 12.268 ms - -[0m
+[0mGET /api/books?limit=8&sort=newest [36m304[0m 17.402 ms - -[0m

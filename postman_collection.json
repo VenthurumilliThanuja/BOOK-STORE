@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "BookStore MERN API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000/api" },
+    { "key": "token", "value": "" },
+    { "key": "bookId", "value": "" },
+    { "key": "orderId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"name\": \"New Reader\",\n  \"email\": \"reader@example.com\",\n  \"password\": \"password123\"\n}" },
+            "url": "{{baseUrl}}/auth/register"
+          }
+        },
+        {
+          "name": "Login",
+          "event": [{ "listen": "test", "script": { "exec": ["const json = pm.response.json();", "if (json.token) pm.collectionVariables.set('token', json.token);"], "type": "text/javascript" } }],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"email\": \"admin@bookstore.com\",\n  \"password\": \"admin123\"\n}" },
+            "url": "{{baseUrl}}/auth/login"
+          }
+        },
+        {
+          "name": "Profile",
+          "request": {
+            "method": "GET",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+            "url": "{{baseUrl}}/auth/profile"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Books",
+      "item": [
+        { "name": "Get Books", "request": { "method": "GET", "url": "{{baseUrl}}/books?search=&sort=newest" } },
+        { "name": "Get Book Details", "request": { "method": "GET", "url": "{{baseUrl}}/books/{{bookId}}" } },
+        {
+          "name": "Create Book",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"title\": \"Sample Book\",\n  \"author\": \"Sample Author\",\n  \"genre\": \"Fiction\",\n  \"price\": 250,\n  \"rating\": 4,\n  \"description\": \"Sample description\",\n  \"image\": \"\",\n  \"stock\": 12\n}" },
+            "url": "{{baseUrl}}/books"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Place Order",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"books\": [{ \"book\": \"{{bookId}}\", \"quantity\": 1 }],\n  \"shippingAddress\": {\n    \"fullName\": \"Demo Reader\",\n    \"phone\": \"9999999999\",\n    \"address\": \"MG Road\",\n    \"city\": \"Hyderabad\",\n    \"state\": \"Telangana\",\n    \"postalCode\": \"500001\",\n    \"country\": \"India\"\n  }\n}" },
+            "url": "{{baseUrl}}/orders"
+          }
+        },
+        { "name": "My Orders", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/orders" } },
+        { "name": "Admin Orders", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/admin/orders" } }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "item": [
+        { "name": "Get Reviews", "request": { "method": "GET", "url": "{{baseUrl}}/reviews/{{bookId}}" } },
+        {
+          "name": "Create Review",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+            "body": { "mode": "raw", "raw": "{\n  \"book\": \"{{bookId}}\",\n  \"rating\": 5,\n  \"comment\": \"Great book\"\n}" },
+            "url": "{{baseUrl}}/reviews"
+          }
+        }
+      ]
+    },
+    { "name": "Admin Stats", "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/admin/stats" } }
+  ]
+}
