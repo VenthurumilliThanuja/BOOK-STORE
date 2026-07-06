@@ -15,6 +15,7 @@ import OrderSuccess from "./pages/OrderSuccess.jsx";
 import Profile from "./pages/Profile.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import ChatBot from "./components/ChatBot.jsx";
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <ChatBot />
       <Footer />
     </BrowserRouter>
   );

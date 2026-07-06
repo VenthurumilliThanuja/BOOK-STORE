@@ -224,8 +224,144 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .socials span { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(255,255,255,.12); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 2rem; padding: 1rem; text-align: center; color: #d4c9b9; }
 
+.chatbot {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1050;
+}
+
+.chatbot-toggle {
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fffaf1;
+  box-shadow: var(--shadow);
+  padding: .9rem 1.15rem;
+  font-weight: 900;
+}
+
+.chatbot-panel {
+  width: min(380px, calc(100vw - 2rem));
+  height: min(560px, calc(100vh - 7rem));
+  margin-bottom: .75rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+}
+
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--primary);
+  color: #fffaf1;
+}
+
+.chatbot-header span {
+  display: block;
+  color: var(--accent-2);
+  font-size: .78rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.chatbot-header button {
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.12);
+  color: #fffaf1;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.chatbot-messages {
+  padding: 1rem;
+  overflow-y: auto;
+  background: #fbf4e9;
+}
+
+.chat-message {
+  max-width: 88%;
+  border-radius: 16px;
+  padding: .75rem .85rem;
+  margin-bottom: .7rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.chat-message p {
+  margin: 0 0 .3rem;
+}
+
+.chat-message p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-message.bot {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.chat-message.user {
+  margin-left: auto;
+  background: var(--primary);
+  color: #fffaf1;
+}
+
+.chatbot-suggestions {
+  display: flex;
+  gap: .45rem;
+  padding: .7rem 1rem 0;
+  background: var(--surface-2);
+  overflow-x: auto;
+}
+
+.chatbot-suggestions button {
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  background: #fffaf1;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: .42rem .7rem;
+  font-size: .85rem;
+  font-weight: 800;
+}
+
+.chatbot-form {
+  display: flex;
+  gap: .5rem;
+  padding: 1rem;
+  background: var(--surface-2);
+}
+
+.chatbot-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: .7rem .9rem;
+}
+
+.chatbot-form button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #1d1306;
+  padding: .7rem .9rem;
+  font-weight: 900;
+}
+
 @media (max-width: 1100px) { .book-grid, .category-grid { grid-template-columns: repeat(3, 1fr); } .benefit-grid, .admin-stats { grid-template-columns: repeat(2, 1fr); } .profile-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 992px) { .hero-grid, .detail-grid, .cart-layout, .checkout-layout, .two-column, .detail-panels, .auth-screen, .admin-shell, .catalog-layout { grid-template-columns: 1fr; } .admin-sidebar { position: relative; height: auto; } .catalog-toolbar { grid-template-columns: 1fr; } .book-composition { min-height: 380px; } .newsletter { align-items: stretch; flex-direction: column; } .footer-grid { grid-template-columns: 1fr 1fr; } .cart-item, .order-card { grid-template-columns: 80px 1fr; } .cart-item .qty-control, .cart-item .subtotal, .cart-item .remove-btn, .order-card > * { grid-column: span 2; } .summary-card { position: static; } }
-@media (max-width: 640px) { .section { padding-top: 2rem; padding-bottom: 2rem; } .hero-grid { padding: 3rem 1rem; } .hero-search, .newsletter form { flex-direction: column; border-radius: var(--radius); } .hero-search button { border-radius: var(--radius-sm); } .book-grid, .category-grid, .benefit-grid, .testimonial-grid, .footer-grid, .profile-grid, .admin-stats, .admin-grid { grid-template-columns: 1fr; } .book-list .book-card { grid-template-columns: 1fr; } .cover-wrap img { height: 280px; } .info-list { grid-template-columns: 1fr; } .detail-actions, .form-row, .admin-tools { flex-direction: column; align-items: stretch; } .recent-orders { grid-column: auto; } .auth-card { margin: 1rem; padding: 1.25rem; } .stack-card { width: 220px; min-height: 270px; } .stack-card.one { right: 0; } .stack-card.two { left: 0; } .stack-card.three { left: 18%; } }
+@media (max-width: 640px) { .section { padding-top: 2rem; padding-bottom: 2rem; } .hero-grid { padding: 3rem 1rem; } .hero-search, .newsletter form { flex-direction: column; border-radius: var(--radius); } .hero-search button { border-radius: var(--radius-sm); } .book-grid, .category-grid, .benefit-grid, .testimonial-grid, .footer-grid, .profile-grid, .admin-stats, .admin-grid { grid-template-columns: 1fr; } .book-list .book-card { grid-template-columns: 1fr; } .cover-wrap img { height: 280px; } .info-list { grid-template-columns: 1fr; } .detail-actions, .form-row, .admin-tools { flex-direction: column; align-items: stretch; } .recent-orders { grid-column: auto; } .auth-card { margin: 1rem; padding: 1.25rem; } .stack-card { width: 220px; min-height: 270px; } .stack-card.one { right: 0; } .stack-card.two { left: 0; } .stack-card.three { left: 18%; } .chatbot { right: .75rem; bottom: .75rem; } .chatbot-panel { height: min(520px, calc(100vh - 5rem)); } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
