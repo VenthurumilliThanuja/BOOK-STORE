@@ -4,6 +4,8 @@ import Book from "../models/Book.js";
 import Order from "../models/Order.js";
 import Review from "../models/Review.js";
 import User from "../models/User.js";
+import LoginLog from "../models/LoginLog.js";
+import LogoutLog from "../models/LogoutLog.js";
 
 dotenv.config();
 await connectDB();
@@ -83,7 +85,14 @@ const books = [
 ];
 
 try {
-  await Promise.all([User.deleteMany(), Book.deleteMany(), Order.deleteMany(), Review.deleteMany()]);
+  await Promise.all([
+    User.deleteMany(),
+    Book.deleteMany(),
+    Order.deleteMany(),
+    Review.deleteMany(),
+    LoginLog.deleteMany(),
+    LogoutLog.deleteMany()
+  ]);
   const createdUsers = await Promise.all(users.map((user) => User.create(user)));
   const createdBooks = await Book.insertMany(books);
   await Review.create({

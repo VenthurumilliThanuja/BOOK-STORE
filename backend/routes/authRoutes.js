@@ -21,7 +21,7 @@ router.post(
   register
 );
 router.post("/login", [body("email").isEmail(), body("password").notEmpty()], validate, login);
-router.post("/logout", logout);
+router.post("/logout", protect, logout);
 router.get("/profile", protect, getProfile);
 router.put("/profile", protect, [body("email").optional().isEmail()], validate, updateProfile);
 router.post("/forgot-password", [body("email").isEmail()], validate, forgotPassword);

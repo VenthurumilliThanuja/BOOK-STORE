@@ -29,7 +29,12 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
-  const logout = () => {
+  const logout = async () => {
+    try {
+      await api.post("/auth/logout");
+    } catch (error) {
+      console.warn("Logout log failed", error.response?.data?.message || error.message);
+    }
     localStorage.removeItem("bookstoreUser");
     setUserState(null);
   };

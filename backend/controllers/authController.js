@@ -1,4 +1,6 @@
 import User from "../models/User.js";
+import LoginLog from "../models/LoginLog.js";
+import LogoutLog from "../models/LogoutLog.js";
 import generateToken from "../utils/generateToken.js";
 
 const sendAuth = (res, user, status = 200) => {
@@ -34,14 +36,34 @@ export const login = async (req, res, next) => {
       res.status(401);
       throw new Error("Invalid email or password");
     }
+    await LoginLog.create({
+      user: user._id,
+      name: user.name,
+      email: user.email,
+      role: user.role,
+      ipAddress: req.ip,
+      userAgent: req.get("user-agent") || ""
+    });
     sendAuth(res, user);
   } catch (error) {
     next(error);
   }
 };
 
-export const logout = (req, res) => {
-  res.json({ message: "Logged out successfully. Remove token on client." });
+export const logout = async (req, res, next) => {
+  try {
+    await LogoutLog.create({
+      user: req.user._id,
+      name: req.user.name,
+      email: req.user.email,
+      role: req.user.role,
+      ipAddress: req.ip,
+      userAgent: req.get("user-agent") || ""
+    });
+    res.json({ message: "Logged out successfully. Remove token on client." });
+  } catch (error) {
+    next(error);
+  }
 };
 
 export const getProfile = async (req, res) => {
