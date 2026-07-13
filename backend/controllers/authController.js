@@ -16,12 +16,13 @@ const sendAuth = (res, user, status = 200) => {
 export const register = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
-    const exists = await User.findOne({ email });
+    const normalizedEmail = String(email).trim().toLowerCase();
+    const exists = await User.findOne({ email: normalizedEmail });
     if (exists) {
       res.status(400);
       throw new Error("Email already registered");
     }
-    const user = await User.create({ name, email, password });
+    const user = await User.create({ name, email: normalizedEmail, password });
     sendAuth(res, user, 201);
   } catch (error) {
     next(error);
@@ -31,7 +32,8 @@ export const register = async (req, res, next) => {
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const normalizedEmail = String(email).trim().toLowerCase();
+    const user = await User.findOne({ email: normalizedEmail });
     if (!user || !(await user.matchPassword(password))) {
       res.status(401);
       throw new Error("Invalid email or password");
