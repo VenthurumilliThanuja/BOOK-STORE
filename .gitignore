@@ -6,3 +6,4 @@ backend/.env
 frontend/.env
 .env
 *.log
+Video Demo/*.mp4
