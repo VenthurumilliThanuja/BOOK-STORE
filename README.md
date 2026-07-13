@@ -43,6 +43,11 @@ BookStore/
   postman_collection.json
 ```
 
+## Demo Links
+
+- Demo Video: https://drive.google.com/drive/folders/13aU6ki1u1hbIdqX76fi4Id9-ShWxj73D?usp=drive_link
+- MERN Phase-wise: https://drive.google.com/drive/folders/1jVzuuZEEUaIF8gmhVsU2URZPwaHtfMTo?usp=drive_link
+
 ## Local Setup
 
 1. Install dependencies.

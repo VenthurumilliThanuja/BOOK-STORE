@@ -7,3 +7,4 @@ frontend/.env
 .env
 *.log
 Video Demo/*.mp4
+!Video Demo/BookStore Output Demo Video.mp4
